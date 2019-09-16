@@ -1,10 +1,12 @@
-import ClientCode from "./client";
-
+import Forest from "./components/Forest";
 
 class Program {
     main() {
-        const client = new ClientCode();
-        client.doSomething();
+        const forest = new Forest();
+        for (let i: number; i < 10000; i++) {
+            forest.plantTree(Math.random(), Math.random(), 'Дуб', 'Green', 'strong')
+        }
+        forest.draw('Древняя Русь')
     }
 }
 
